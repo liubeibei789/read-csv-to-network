@@ -6,10 +6,12 @@ public class TestReadCSV {
 
     public static void main(String[] args) {
 
-        ReadCSV readCSVComp = new ReadCSV();
+        String filePath1 = "./toy_node.csv";
+        String filePath2 = "./toy_edge.csv";
+        ReadCSV readCSVComp = new ReadCSV(filePath1, filePath2); //* common option
 
-        String filePath1 = "/Users/beibei/Desktop/toy_node.csv";
-        String filePath2 = "/Users/beibei/Desktop/toy_edge.csv";
+        //uncomment the following & line if using default csv files (and comment the * line)
+        //ReadCSV readCSVComp = new ReadCSV();  //& default option
 
         int[] num = readCSVComp.read(filePath1, filePath2);
         int[] nodeId = readCSVComp.getNodeId();
